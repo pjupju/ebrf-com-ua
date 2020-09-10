@@ -1,0 +1,61 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+.banner{
+    background: url(../images/banner-bg.jpg) no-repeat center;
+    background-size: cover;
+    &__wrapper{
+        padding: 50px 0 100px;
+    }
+    &__title{
+        font-size: 48px;
+        line-height: 56px;
+        @extend %roboto-bold;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 70px;
+        text-align: center;
+    }
+    &__img img{
+        height: 65px;
+    }
+    &__subtitle{
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        font-family: "Myriad Pro";
+        color: #fff;
+    }
+    &__descr{
+        margin-top: 15px;
+        font-size: 16px;
+        font-family: "Myriad Pro";
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 20px;
+        max-width: 197px;
+    }
+    &__btn{
+        margin-top: 60px;
+        text-align: center;
+        & a{
+            font-size: 20px;
+            @extend %roboto-bold;
+            text-transform: uppercase;
+            padding: 20px 45px;
+            border-radius: 3px;
+            background-color: rgb(47, 154, 225);
+            color: #fff;
+            cursor: pointer;
+            &:hover{
+                border: 2px solid #fff;
+                background-color: rgb(1, 99, 163);
+            }
+        }
+    }
+}
