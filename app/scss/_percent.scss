@@ -1,0 +1,48 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+
+.percent{
+    &__title{
+        margin-top: 50px;
+        font-size: 32px;
+        line-height: 44px;
+        @extend %roboto-bold;
+        color: rgb(47, 59, 71);
+    }
+    &__items{
+        margin-top: 50px;
+        margin-bottom: 75px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__item{
+        width: 378px;
+        text-align: center;
+        padding: 35px 0 30px;
+        background-color: rgb(47, 154, 225);
+        border-radius: 3px;
+        &:nth-child(1){
+            background-color: lighten($color: rgb(47, 154, 225), $amount: 10)
+        }
+        &:nth-child(2){
+            background-color: lighten($color: rgb(47, 154, 225), $amount: 5)
+        }
+        &:nth-child(3){
+            background-color: lighten($color: rgb(47, 154, 225), $amount: 1)
+        }
+    }
+    &__img img{
+        height: 60px;
+    }
+    &__subtitle{
+        font-size: 20px;
+        line-height: 22px;
+        @extend %roboto-bold;
+        margin-top: 25px;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+    }
+}
+  
