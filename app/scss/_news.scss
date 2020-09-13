@@ -1,0 +1,48 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+.news{
+    padding: 60px 0 100px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    &__title{
+        font-size: 36px;
+        line-height: 54px;
+        @extend %roboto-bold;
+        color: rgb(47, 59, 71);
+    }
+    &__items{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 280px;
+        width: 100%;
+    }
+    &__item-wrapper{
+        padding: 10px 10px 0;
+    }
+    &__item-date{
+        font-size: 12px;
+        @extend %roboto-regular;
+        color: rgb(117, 134, 146);
+        line-height: 24px;
+        text-align: right;
+    }
+    &__item-subtitle{
+        margin-top: 15px;
+        font-size: 20px;
+        line-height: 26px;
+        @extend %roboto-bold;
+        color: rgb(47, 59, 71);
+    }
+    &__item-text{
+        margin-top: 25px;
+        font-size: 16px;
+        line-height: 24px;
+        @extend %roboto-regular;
+        color: rgb(141, 141, 141);
+    }
+}

@@ -1,0 +1,45 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+.advantages{
+    background: url(../images/advantages-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0 65px;
+    &__wrapper{
+        margin-left: 38%;
+    }
+    &__title{
+        font-size: 48px;
+        line-height: 68px;
+        @extend %roboto-bold;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+    }
+    &__item{
+        margin-left: 6%;
+        margin-top: 25px;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgb(47, 154, 225);
+            width: 13px;
+            height: 13px;
+            top: 5%;
+            left: -4%;
+        }
+    }
+    &__item-title{
+        font-size: 16px;
+        line-height: 22px;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+    }
+    &__item-subtitle{
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 22px;
+    }  
+}
