@@ -6,6 +6,7 @@
 .contacts{
     background-color: rgb(240, 240, 240);
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    padding-top: 60px;
     &__title{
         font-size: 32px;
         line-height: 48px;
@@ -35,9 +36,9 @@
         }
         & button.active {
             padding: 10px 80px;
-            background-color: #fff;
             border-radius: 3px;
             background-color: rgb(47, 154, 225);
+            color: rgb(255, 255, 255);
         }
     }
     &__tabcontent {

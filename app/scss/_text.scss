@@ -25,13 +25,26 @@
         line-height: 22px;
         margin-left: 4%;
     }
-    & ol li{
-        font-size: 16px;
-        @extend %roboto-regular;
-        color: rgb(141, 141, 141);
-        line-height: 22px;
-        list-style-type: decimal;
-        
+    & ol{
+        counter-reset: my-awesome-counter;
+        & li{
+            font-size: 16px;
+            @extend %roboto-regular;
+            color: rgb(141, 141, 141);
+            line-height: 22px;
+            counter-increment: my-awesome-counter;
+            position: relative;
+            &:before{
+                position: absolute;
+                content: counter(my-awesome-counter) '. ';
+                top: -3%;
+                left: -3%;
+                color: rgb(47, 154, 225);
+                @extend %roboto-bold;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
     }
     & article h2{
         font-size: 22px;
