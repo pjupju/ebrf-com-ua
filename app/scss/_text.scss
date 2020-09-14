@@ -24,6 +24,17 @@
         color: rgb(141, 141, 141);
         line-height: 22px;
         margin-left: 4%;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgb(47, 154, 225);
+            width: 9px;
+            height: 9px;
+            top: 22%;
+            left: -2%;
+        }
     }
     & ol{
         counter-reset: my-awesome-counter;
@@ -38,7 +49,7 @@
                 position: absolute;
                 content: counter(my-awesome-counter) '. ';
                 top: -3%;
-                left: -3%;
+                left: -2%;
                 color: rgb(47, 154, 225);
                 @extend %roboto-bold;
                 font-size: 16px;
@@ -57,5 +68,12 @@
         line-height: 27px;
         color: rgb(47, 59, 71);
         @extend %roboto-bold;
+    }
+    & article span{
+        font-size: 16px;
+        line-height: 22px;
+        color: rgb(0, 0, 0);
+        font-style: italic;
+        @extend %roboto-regular;
     }
 }
