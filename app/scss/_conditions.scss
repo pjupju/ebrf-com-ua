@@ -1,0 +1,72 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+.conditions {
+    &__accordion {
+        background-color: rgb(41, 138, 202);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        font-size: 20px;
+        line-height: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        &:hover {
+            background-color: rgb(41, 138, 202);
+        }
+        &:after {
+            content: '\02795';
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+    }
+    &__accordion-block {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-left: 6%;
+        position: relative;
+        margin-bottom: 5px;
+        background-color: #fff;
+    }
+    &__accordion-name {
+        font-size: 22px;
+        line-height: 25px;
+        color: rgb(47, 59, 71);
+        text-transform: uppercase;
+        position: relative;
+        @extend %roboto-medium;
+        &:before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgb(47, 154, 225);
+            width: 13px;
+            height: 13px;
+            top: 5%;
+            left: -4%;
+        }
+    }
+    &__accordion-descr {
+        font-size: 16px;
+        color: rgb(141, 141, 141);
+        line-height: 21px;
+        @extend %roboto-regular;
+        margin-top: 10px;
+    }
+}
+.active {
+    background-color: #ccc;
+    &:after {
+        content: "\2796";
+    }
+}
