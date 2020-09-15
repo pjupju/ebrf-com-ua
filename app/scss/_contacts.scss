@@ -19,7 +19,6 @@
         background-color: #f1f1f1;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #ccc;
         & button {
             background-color: inherit;
             float: left;
@@ -44,12 +43,13 @@
     &__tabcontent {
         display: none;
         padding: 6px 12px;
-        border-top: none;
         text-align: center;
         font-size: 16px;
         @extend %roboto-regular;
         color: rgb(141, 141, 141);
         line-height: 22px;
         padding-bottom: 100px;
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
     }
 }
