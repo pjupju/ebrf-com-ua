@@ -10,12 +10,24 @@
         line-height: 44px;
         @extend %roboto-bold;
         color: rgb(47, 59, 71);
+        @media screen and (max-width: 690px){
+            text-align: center;
+        }
+        @media screen and (max-width: 400px){
+            font-size: 25px;
+            line-height: 36px;
+        }
     }
     &__items{
         margin-top: 50px;
         margin-bottom: 75px;
         display: flex;
         justify-content: space-around;
+        @media screen and (max-width: 690px){
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
     }
     &__item{
         width: 378px;
@@ -24,13 +36,18 @@
         background-color: rgb(47, 154, 225);
         border-radius: 3px;
         &:nth-child(1){
-            background-color: lighten($color: rgb(47, 154, 225), $amount: 10)
+            background-color: lighten(rgb(47, 154, 225), 12.5%);
         }
         &:nth-child(2){
-            background-color: lighten($color: rgb(47, 154, 225), $amount: 5)
+            background-color: lighten(rgb(47, 154, 225), 6.25%);
+            margin: 0 5px;
+            @media screen and (max-width: 690px){
+                margin: 5px 0;
+            }
         }
-        &:nth-child(3){
-            background-color: lighten($color: rgb(47, 154, 225), $amount: 1)
+        @media screen and (max-width: 690px){
+            max-width: 286px;
+            width: 100%;
         }
     }
     &__img img{
@@ -43,6 +60,10 @@
         margin-top: 25px;
         text-transform: uppercase;
         color: rgb(255, 255, 255);
+        padding: 0 10px;
+        @media screen and (max-width: 910px){
+            font-size: 16px;
+        }
     }
 }
   

@@ -6,12 +6,24 @@
     padding: 60px 0 100px;
     background-color: rgb(240, 240, 240);
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    @media screen and (max-width: 400px){
+        padding: 30px 0 50px;
+    }
     &__title{
         font-size: 36px;
         color: rgb(47, 59, 71);
         @extend %roboto-bold;
         line-height: 54px;
         margin-bottom: 30px;
+        @media screen and (max-width: 675px){
+            font-size: 28px;
+            line-height: 40px;
+        }
+        @media screen and (max-width: 400px){
+            font-size: 17px;
+            line-height: 32px;
+            margin-bottom: 15px;
+        }
     }
     &__accordion {
         background-color: rgb(41, 138, 202);
@@ -26,8 +38,17 @@
         color: #fff;
         text-transform: uppercase;
         position: relative;
+        &:nth-child(1){
+            background-color: lighten(rgb(45, 131, 187), 18.75%);
+        }
+        &:nth-child(2){
+            background-color: lighten(rgb(45, 131, 187), 12.5%);
+        }
+        &:nth-child(3){
+            background-color: lighten(rgb(45, 131, 187), 6.25%);
+        }
         &:hover {
-            background-color: rgb(41, 138, 202);
+            background-color: rgb(31, 107, 157);
         }
         &:after {
             content: '';
@@ -65,6 +86,9 @@
         position: relative;
         margin-bottom: 5px;
         background-color: #fff;
+        @media screen and (max-width: 400px){
+            padding: 0 22px 0 30px;
+        }
     }
     &__accordion-name {
         margin-top: 20px;
@@ -74,6 +98,11 @@
         text-transform: uppercase;
         position: relative;
         @extend %roboto-medium;
+        @media screen and (max-width: 550px){
+            font-size: 16px;
+            line-height: 18px;
+            margin-top: 10px;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -83,6 +112,18 @@
             height: 13px;
             top: 20%;
             left: -3%;
+            @media screen and (max-width: 675px){
+                left: -5%;
+                top: 15%;
+            }
+            @media screen and (max-width: 550px){
+                left: -8%;
+                top: 10%;
+            }
+            @media screen and (max-width: 400px){
+                left: -8%;
+                top: 6%;
+            }
         }
     }
     &__accordion-descr {
@@ -91,6 +132,11 @@
         line-height: 21px;
         @extend %roboto-regular;
         margin: 10px 0 20px;
+        @media screen and (max-width: 400px){
+            margin: 5px 0 10px;
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 }
 

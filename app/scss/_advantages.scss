@@ -8,6 +8,9 @@
     padding: 100px 0 65px;
     &__wrapper{
         margin-left: 38%;
+        @media screen and (max-width: 850px){
+            margin-left: 0;
+        }
     }
     &__title{
         font-size: 48px;
@@ -15,6 +18,14 @@
         @extend %roboto-bold;
         color: rgb(255, 255, 255);
         text-transform: uppercase;
+        @media screen and (max-width: 570px){
+            font-size: 36px;
+            line-height: 45px;
+        }
+        @media screen and (max-width: 450px){
+            font-size: 30px;
+            line-height: 30px;
+        }
     }
     &__item{
         margin-left: 6%;
@@ -29,6 +40,12 @@
             height: 13px;
             top: 5%;
             left: -4%;
+            @media screen and (max-width: 570px){
+                left: -7%;
+            }
+            @media screen and (max-width: 449px){
+                top: 4%;
+            }
         }
     }
     &__item-title{
@@ -36,10 +53,18 @@
         line-height: 22px;
         color: rgb(255, 255, 255);
         text-transform: uppercase;
+        @media screen and (max-width: 449px){
+            font-size: 13px;
+            line-height: 20px;
+        }
     }
     &__item-subtitle{
         font-size: 16px;
         color: rgba(255, 255, 255, 0.6);
         line-height: 22px;
+        @media screen and (max-width: 449px){
+            font-size: 13px;
+            line-height: 20px;
+        }
     }  
 }

@@ -1,6 +1,3 @@
-$(function () {
-
-});
 
 var acc = document.getElementsByClassName("conditions__accordion");
 var faq = document.getElementsByClassName("faq__accordion-question");
