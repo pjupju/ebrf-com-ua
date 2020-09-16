@@ -10,7 +10,6 @@
     &__title{
         font-size: 32px;
         line-height: 48px;
-        @extend %roboto-bold;
         color: rgb(47, 59, 71);
         @media screen and (max-width: 600px){
             font-size: 24px;
@@ -23,29 +22,39 @@
     }
     &__tab{
         margin-top: 50px;
-        overflow: hidden;
+        overflow-x: scroll;
         background-color: #f1f1f1;
         display: flex;
         justify-content: space-between;
+        padding-bottom: 20px;
         @media screen and (max-width: 528px){
             margin-top: 30px;
         }
         & button {
             background-color: inherit;
-            float: left;
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 16px;
+            padding: 14px 10px;
             transition: 0.3s;
             font-size: 16px;
             line-height: 21px;
-            @extend %roboto-bold;
             color: rgb(47, 59, 71);
             text-transform: uppercase;
+            min-width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: 768px){
+                min-width: 20%;
+            }
+            @media screen and (max-width: 564px){
+                min-width: 33.5%;
+                font-size: 12px;
+                line-height: 12px;
+            }
         }
         & button.active {
-            padding: 10px 80px;
             border-radius: 3px;
             background-color: rgb(47, 154, 225);
             color: rgb(255, 255, 255);
@@ -56,12 +65,10 @@
         padding: 6px 12px;
         text-align: center;
         font-size: 16px;
-        @extend %roboto-regular;
         color: rgb(141, 141, 141);
         line-height: 22px;
         padding-bottom: 100px;
         border-top: 1px solid #ccc;
-        margin-top: 20px;
         @media screen and (max-width: 528px){
             font-size: 14px;
             line-height: 16px;
