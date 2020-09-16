@@ -1,20 +1,8 @@
-
 var acc = document.getElementsByClassName("conditions__accordion");
 var faq = document.getElementsByClassName("faq__accordion-question");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-    console.log(acc[i].classList.length);
-    if(acc[i].classList.length == 1) {
-        acc[0].classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    } 
-    // console.log(acc[i].classList.includes("active"));
     acc[i].addEventListener("click", function () {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
