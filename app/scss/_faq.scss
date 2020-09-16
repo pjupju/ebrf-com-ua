@@ -12,6 +12,19 @@
         @extend %roboto-bold;
         line-height: 54px;
         margin-bottom: 30px;
+        @media screen and (max-width: 428px){
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+    &__accordion-item:nth-child(odd){
+        & > .faq__accordion-question{
+            background-color: rgb(115, 118, 121);
+            &.active{
+                background-color: rgb(240, 240, 240);
+            }
+        }
     }
     &__accordion-question{
         cursor: pointer;
@@ -27,8 +40,8 @@
         padding-left: 50px;
         background-color: #ababab;
         position: relative;
-        &:nth-child(2n-1){
-            background-color: #6a6a6a;
+        @media screen and (max-width: 510px){
+            padding-bottom: 5px;
         }
         &:after {
             content: '';
@@ -40,6 +53,9 @@
             position: absolute;
             top: 21px;
             transition: .3s;
+            @media screen and (max-width: 880px){
+                display: none;
+            }
         }
         &:before{
             position: absolute;
@@ -51,6 +67,34 @@
             background-color: rgb(47, 154, 225);
             left: 15px;
             top: 16px;
+            @media screen and (max-width: 1100px){
+                padding: 0.1% 0.7%;
+            }
+            @media screen and (max-width: 990px){
+                padding: 0.1% 0.8%;
+            }
+            @media screen and (max-width: 835px){
+                padding: 0.1% 0.9%;
+            }
+            @media screen and (max-width: 700px){
+                padding: 0.1% 1%;
+            }
+            @media screen and (max-width: 590px){
+                padding: 0.05% 1.1%;
+            }
+            @media screen and (max-width: 510px){
+                padding: 0.05% 1.2%;
+            }
+            @media screen and (max-width: 467px){
+                padding: 0.05% 1.5%;
+                top: 18%;
+            }
+            @media screen and (max-width: 375px){
+                padding: 0.05% 1.7%;
+            }
+            @media screen and (max-width: 332px){
+                padding: 0.05% 2%;
+            }
         }
         &.active {
             border-radius: 3px;
@@ -75,9 +119,37 @@
                 transition: .4s;
                 border-radius: 50%;
                 color: #fff;
-                background-color: rgb(47, 154, 225);
+                background-color: rgb(217, 217, 217);
                 left: 15px;
                 top: 15px;
+                @media screen and (max-width: 1100px){
+                    padding: 0.1% 0.7%;
+                }
+                @media screen and (max-width: 990px){
+                    padding: 0.1% 0.8%;
+                }
+                @media screen and (max-width: 835px){
+                    padding: 0.1% 0.9%;
+                }
+                @media screen and (max-width: 700px){
+                    padding: 0.1% 1%;
+                }
+                @media screen and (max-width: 590px){
+                    padding: 0.05% 1.1%;
+                }
+                @media screen and (max-width: 510px){
+                    padding: 0.05% 1.2%;
+                }
+                @media screen and (max-width: 467px){
+                    padding: 0.05% 1.5%;
+                    top: 18%;
+                }
+                @media screen and (max-width: 375px){
+                    padding: 0.05% 1.7%;
+                }
+                @media screen and (max-width: 332px){
+                    padding: 0.05% 2%;
+                }
             }
         }
     }
@@ -86,16 +158,8 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        position: relative;
-        &:before {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            background-color: rgb(47, 154, 225);
-            width: 13px;
-            height: 13px;
-            top: 20%;
-            left: -3%;
+        @media screen and (max-width: 510px){
+            padding-right: 22px;
         }
     }
     &__accordion-text{
@@ -104,5 +168,5 @@
         color: rgb(141, 141, 141);
         line-height: 22px;
         padding: 20px 0;
+        }
     }
-}

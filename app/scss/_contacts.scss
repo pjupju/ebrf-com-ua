@@ -12,6 +12,14 @@
         line-height: 48px;
         @extend %roboto-bold;
         color: rgb(47, 59, 71);
+        @media screen and (max-width: 600px){
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+        }
+        @media screen and (max-width: 428px){
+            font-size: 22px;
+        }
     }
     &__tab{
         margin-top: 50px;
@@ -19,6 +27,9 @@
         background-color: #f1f1f1;
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 528px){
+            margin-top: 30px;
+        }
         & button {
             background-color: inherit;
             float: left;
@@ -51,5 +62,10 @@
         padding-bottom: 100px;
         border-top: 1px solid #ccc;
         margin-top: 20px;
+        @media screen and (max-width: 528px){
+            font-size: 14px;
+            line-height: 16px;
+            padding-bottom: 50px;
+        }
     }
 }
