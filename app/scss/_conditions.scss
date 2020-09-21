@@ -25,7 +25,7 @@
             margin-bottom: 15px;
         }
     }
-    &__accordion {
+    &__accordion-title {
         background-color: rgb(41, 138, 202);
         cursor: pointer;
         padding: 18px;
@@ -61,7 +61,18 @@
             top: 21px;
             transition: .3s;
         }
-        &.active {
+    }
+    &__accordion-block {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        position: relative;
+        margin-bottom: 5px;
+        background-color: #fff;
+        @media screen and (max-width: 400px){
+            padding: 0 22px 0 30px;
+        }
+        &.open {
             background-color: rgb(74, 90, 99);
             border-radius: 3px;
             position: relative;
@@ -78,18 +89,6 @@
             }
         }
     }
-    &__accordion-block {
-        padding: 0 50px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        position: relative;
-        margin-bottom: 5px;
-        background-color: #fff;
-        @media screen and (max-width: 400px){
-            padding: 0 22px 0 30px;
-        }
-    }
     &__accordion-name {
         margin-top: 20px;
         font-size: 22px;
@@ -98,10 +97,15 @@
         text-transform: uppercase;
         position: relative;
         @extend %roboto-medium;
+        margin-left: 4%;
+        @media screen and (max-width: 675px){
+            margin-left: 8%;
+        }
         @media screen and (max-width: 550px){
             font-size: 16px;
             line-height: 18px;
             margin-top: 10px;
+            margin-left: 10%;
         }
         &:before {
             content: '';
@@ -131,7 +135,13 @@
         color: rgb(141, 141, 141);
         line-height: 21px;
         @extend %roboto-regular;
-        margin: 10px 0 20px;
+        margin: 10px 0 20px 4%;
+        @media screen and (max-width: 675px){
+            margin-left: 8%;
+        }
+        @media screen and (max-width: 550px){
+            margin-left: 10%;
+        }
         @media screen and (max-width: 400px){
             margin: 5px 0 10px;
             font-size: 14px;

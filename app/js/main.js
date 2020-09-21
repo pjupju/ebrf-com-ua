@@ -12,6 +12,20 @@ $('.faq__accordion-title').click(function () {
     }
   });
 
+  $('.conditions__accordion').click(function () {
+    if ($(this).parent().hasClass('open')) {
+      $(this).parent().find('.conditions__accordion-block').slideUp('fast');
+      $(this).parent().removeClass('open');
+    } else {
+      $('.conditions__items').find('.open').each(function (index, el) {
+        $(el).removeClass('open');
+        $(el).find('.conditions__accordion-block').slideUp('fast');
+      })
+      $(this).parent().find('.conditions__accordion-block').slideDown('fast');
+      $(this).parent().addClass('open');
+    }
+  });  
+
 function openCompany(evt, companyName) {
     let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("contacts__tabcontent");
